@@ -1,0 +1,64 @@
+@import '../../../javascript/bootstrap/less/variables.less';
+@import 'my_variables';
+
+.h5 {
+  color: black;
+  text-align: center;
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+#content .html_advantages,
+.html_advantages {
+  .heading_title.custom {
+    text-align: center;
+    h1 {
+      margin-top: 10px;
+      text-transform: none;
+      .h5();
+      &::after {
+        display: none;
+      }
+    }
+  }
+  h5 {
+    .h5();
+    &.heading_title {
+      margin-top: 20px;
+    }
+  }
+  .grid.advantage  {
+    color: black;
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    align-items: start;
+    justify-items: stretch;
+    margin-bottom: 40px;
+    .icon {
+      display: grid;
+      align-content: end;
+      justify-content: center;
+      min-height: 80px;
+      margin-bottom: 30px;
+    }
+    .text,
+    .title {
+      line-height: 25px;
+      text-align: center;
+    }
+    .title {
+      /* font-size:  */
+      font-weight: 700;
+      /* min-height: 60px; */
+      margin-bottom: 0;
+    }
+    svg {
+      max-height: 80px;
+      fill: none;
+      stroke-width: 2px;
+      stroke-miterlimit: 10;
+    }
+  }
+}

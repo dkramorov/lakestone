@@ -1,0 +1,277 @@
+@import '../../../javascript/bootstrap/less/variables.less';
+@import 'my_variables';
+@import 'mixins';
+
+@font-face {
+	font-family: "ProximaNova";
+	font-display: fallback;
+	src: url('/fonts/Proxima_Nova-Bold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 700;
+}
+
+/* information */
+body[class^=information-contact] .info {
+	width: 80%;
+	margin: 50px auto;
+}
+
+body[class^=information-contact] .info span.ersatz_head3 {
+	text-align: center;
+}
+
+body[class^=information-contact] .info .phone,
+body[class^=information-contact] .info span.ersatz_head3 {
+	font-size: 19px;
+	font-weight: 600;
+	font-family: 'Montserrat', sans-serif;
+	color: black;
+	text-transform: uppercase;
+}
+
+body[class^=information-contact] .form-group {
+	margin-top: 30px;
+}
+
+body[class^=information-contact] .form-control, body[class^=information-contact] .control-label {
+	font-size: 15px;
+}
+
+/* company-reviews */
+
+body[class^=information-company_reviews] .content_wrap .item {
+	margin-bottom: 30px;
+	padding: 10px 0;
+}
+
+body[class^=information-company_reviews] .content_wrap .item:hover {
+	background-color: #f8f8f8;
+}
+
+body[class^=information-company_reviews] .content_wrap .item .pros {
+	color: #a94442;
+}
+
+body[class^=information-company_reviews] .content_wrap .item .cons {
+	color: #3f77c0;
+}
+
+#content {
+	.content_wrap .title {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	.rait-informer {
+		margin: 20px 0 0;
+	}
+
+	.review {
+		margin: 0;
+
+		& > div {
+			padding: 0;
+
+			&:nth-child(1) {
+				width: 11.66666667%
+			}
+
+			&:nth-child(2) {
+				width: 88.33333333%;
+
+				&.col-sm-7 {
+					width: 63.33333333%;
+				}
+			}
+		}
+
+		padding: 20px 0 25px;
+		border-bottom: 1px solid #efefef;
+		margin-bottom: 0;
+
+		.no-photo {
+			width: 100px;
+			height: 100px;
+			//background: #f3f3f3 url("/image/user.png") no-repeat center center;
+			background: url("//avatars.mds.yandex.net/get-yapic/0/0-0/islands-retina-50") no-repeat center center;
+			//background-size: contain;
+		}
+
+		.details {
+			padding: 1px 0 15px;
+
+			& > div {
+				font-size: 15px;
+				color: #333333;
+				font-family: ProximaNova;
+				font-weight: 700;
+				display: inline-block;
+				margin: 0 29px 0 0;
+			}
+		}
+
+		.rev-body {
+			& > div {
+				padding: 0 0 20px;
+
+				&:last-child {
+					padding: 0;
+				}
+
+				&:empty {
+					display: none;
+				}
+
+				.pros {
+					color: #1670e2;
+				}
+
+				.cons {
+					color: #f35a4a;
+				}
+			}
+		}
+	}
+
+	.reviews-top {
+		border-bottom: 1px solid #efefef;
+		padding: 0 0 13px;
+
+		h1 {
+			font-family: ProximaNova;
+			font-weight: 700;
+			//text-transform: uppercase;
+			font-size: 30px;
+			color: black;
+			display: inline-block;
+			margin: 13px 0 10px;
+
+			/*
+			&::after {
+				content: '';
+				display: block;
+				border: solid thin #e99b1f;
+				position: relative;
+				width: 30%;
+				margin: auto;
+				margin-top: 20px;
+			}
+			 */
+
+			a {
+				color: @blue;
+				border-bottom: 1px solid @blue;
+				text-decoration: none;
+
+				&:hover {
+					border-bottom: none;
+				}
+			}
+		}
+
+		& > a {
+			display: inline-block;
+			width: 199px;
+			height: 42px;
+			background: #196ee3;
+			border-radius: 2px;
+			font-size: 15px;
+			color: #ffffff;
+			font-family: Montserrat;
+			font-weight: 400;
+			float: right;
+			text-align: center;
+			line-height: 42px;
+			text-decoration: none;
+			margin: 11px 0 0 0;
+
+			&:hover, &:focus {
+				background: #1767d6;
+			}
+		}
+	}
+
+	.text_canvas img.wide {
+		width: 100%;
+	}
+}
+
+
+a.phone_link,
+a.email_link {
+	color: @black;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+		.text-decoration-style(@black);
+	}
+}
+
+.container-fluid {
+	& ~ footer {
+		margin-top: 0;
+	}
+
+	.panel-grey {
+		background-color: @grey-back;
+		padding: 20px 0;
+
+		.content_wrap {
+			margin: 0;
+			padding: 10px 25px 30px 27px;
+		}
+	}
+}
+
+.information-sidebar {
+	background-color: white;
+
+	.item {
+		padding: 10px 0px 10px 16px;
+		color: #444;
+		display: block;
+		font-size: 13px;
+		// @media (max-width: @screen-md) {
+		//   font-size: 10px;
+		// }
+		font-weight: 500;
+
+		&.active {
+			color: #e14e51;
+		}
+
+		&.title {
+			margin-top: 15px;
+			text-transform: uppercase;
+			background-color: #333;
+			color: white;
+		}
+	}
+
+	& > .item.title:first-child {
+		margin-top: 0;
+	}
+}
+
+@media (max-width:730px){
+	#content {
+		.rait-informer {
+			margin: 18px 0 0;
+		}
+
+		.review {
+			& > div:nth-child(1),
+			& > div:nth-child(2),
+			& > div.col-sm-7:nth-child(2) {
+				width: 100%;
+			}
+		}
+
+		.reviews-top {
+			& > a {
+				float:none;
+			}
+		}
+	}
+}

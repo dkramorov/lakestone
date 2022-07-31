@@ -1,0 +1,79 @@
+@import 'my_variables';
+
+.PickPoints {
+  color: black;
+  h5 {
+    color: black;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  .city-selector {
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    .pad {
+      color: @red;
+      width: 20px;
+      font-size: 26px;
+      line-height: 0;
+      font-weight: 700;
+      position: relative;
+      top: 4px;
+    }
+    .selector {
+      flex: 1 1 30%;
+      font-size: 14px;
+      .head {
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+      .city {
+        a {
+          margin-left: 5px;
+        }
+      }
+    }
+    .description {
+      flex: 1 1 65%;
+      font-size: 14px;
+    }
+  }
+  .map-navigator {
+    @height: 500px;
+    border: solid thin #eee;
+    .pick_point {
+      flex: 1 1 30%;
+      .pp_title {
+        background-color: #f8f8f8;
+        padding: 20px 0;
+        padding-left: 15px;
+        margin-bottom: 0;
+        text-align: left;
+        font-weight: 700;
+        font-size: 16px;
+      }
+      .ListPoints {
+        height: @height - 60px;
+        overflow: auto;
+        .item {
+          padding: 5px 10px;
+          padding-right: 20px;
+          cursor: pointer;
+          text-decoration: underline;
+          text-decoration-color: @greylightest;
+          &:hover {
+            text-decoration-color: @greylight;
+          }
+        }
+      }
+    }
+    .map-canvas {
+      flex: 1 1 70%;
+      height: @height;
+      position: relative;
+      display: inline-block;
+    }
+  }
+}

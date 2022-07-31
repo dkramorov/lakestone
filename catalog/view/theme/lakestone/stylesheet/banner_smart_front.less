@@ -1,0 +1,79 @@
+@import '../../../javascript/bootstrap/less/variables.less';
+@import 'my_variables';
+
+.banner_smart_front {
+  @left: 1.35fr;
+  grid-template-columns: @left 2fr - @left;
+  .banner {
+    .title {
+      width: 40%;
+      font-weight: 700;
+    }
+    .text {
+      top: 20%;
+      width: 40%;
+    }
+  }
+  .banner_smart_slider {
+    .title,
+    .text {
+      left: 7%;
+    }
+    .title {
+      top: 19%;
+      font-size: 23px;
+      line-height: 40px;
+    }
+    .text {
+      top: 55%;
+      font-size: 15px;
+      line-height: 30px;
+    }
+  }
+  .banner_smart_right_top,
+  .banner_smart_right_bottom {
+    .title {
+      font-size: 22px;
+      line-height: 30px;
+    }
+    .text {
+      font-size: 14px;
+      line-height: 25px;
+      font-weight: 500;
+    }
+  }
+  .banner_smart_right_top {
+    .title {
+      top: 17%;
+      left: 8%;
+    }
+    .text {
+      top: 58%;
+      left: 8%;
+      width: 90%;
+    }
+  }
+  .banner_smart_right_bottom {
+    background-color: @red;
+    img {
+      display: block;
+      position: relative;
+      height: 85px;
+      bottom: -115px;
+      right: -58%;
+    }
+    color: white;
+    .title,
+    .text {
+      left: 9%;
+    }
+    .title {
+      top: 16%;
+      width: 80%;
+    }
+    .text {
+      top: 41%;
+      width: 80%;
+    }
+  }
+}

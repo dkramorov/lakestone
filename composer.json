@@ -1,0 +1,24 @@
+{
+  "name": "lakestone/lakestone.ru",
+  "description": "e-commerce",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "require": {
+    "guzzlehttp/guzzle": "^7.0",
+    "ext-json": "*",
+    "aws/aws-sdk-php": "^3.0",
+    "ext-dom": "*",
+    "ext-pcntl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Lakestone\\": "src"
+    }
+  },
+  "config": {
+    "platform": {
+      "ext-pcntl": "8.0",
+      "ext-posix": "8.0"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+.text-decoration-style(@color; @style: solid) {
+  -webkit-text-decoration-style: @style;
+  -moz-text-decoration-style: @style;
+  text-decoration-style: @style;
+  -webkit-text-decoration-color: @color;
+  -moz-text-decoration-color: @color;
+  text-decoration-color: @color;
+}
+.placeholder(@color) {
+  // Firefox
+  &::-moz-placeholder {
+    color: @color;
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+  &:-ms-input-placeholder { color: @color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+  
+}

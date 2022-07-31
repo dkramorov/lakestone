@@ -1,0 +1,112 @@
+@import '../../../javascript/bootstrap/less/variables.less';
+@import 'my_variables';
+
+.banner_smart_front_middle {
+  margin-top: 30px;
+  .title, .text, .button {
+    position: absolute;
+  }
+  .text {
+    @media (max-width: @screen-md) {
+      display: none;
+    }
+  }
+  .delim {
+    height: 33px;
+  }
+  .banner {
+    position: relative;
+  }
+  .banner_right_top .title,
+  .banner_right_bottom .title,
+  .banner_left .title {
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 600;
+    color: black;
+    @media (max-width: @screen-sm) {
+      line-height: 6vw;
+      font-size: 4vw;
+    }
+  }
+  .banner_left .title {
+    top: 8%;
+    left: 6%;
+    width: 50%;
+  }
+  .banner_right_top {
+    .title {
+      top: 15%;
+      left: 5%;
+      width: 50%;
+    }
+    .text {
+      color: black;
+      top: 60%;
+      left: 5%;
+    }
+  }
+  .banner_right_bottom {
+    .title,
+    .text {
+      color: white;
+      left: 49%;
+      width: 45%;
+    }
+    .title {
+      top: 10%;
+    }
+    .text {
+      top: 55%;
+      line-height: 30px;
+      @media (max-width: @screen-lg) {
+        display: none;
+      }
+    }
+  }
+  .banner .button {
+    position: absolute;
+    color: black;
+    opacity: 0;
+    text-align: center;
+    background-color: white;
+    padding: 5px 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+  }
+  .banner:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+  }
+  .banner:hover:after {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .banner:hover .button {
+    opacity: 1;
+    z-index: 10;
+  }
+  @media (max-width: @screen-sm) {
+    margin-top: 15px;
+    .title {
+      line-height: 6vw;
+      font-size: 5vw;
+    }
+    .text {
+      display: none;
+    }
+    .delim {
+      height: 15px;
+    }
+    .banner_right_top {
+      margin-top: 15px;
+    }
+  }
+}

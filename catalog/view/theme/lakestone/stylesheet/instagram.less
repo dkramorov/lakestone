@@ -1,0 +1,50 @@
+@import '../../../javascript/bootstrap/less/variables.less';
+@import 'my_variables';
+
+.pre-footer {
+  margin-bottom: -31px;
+  overflow: hidden;
+  .owl-stage {
+    display: flex;
+    align-items: center;
+    background-color: @black;
+  }
+  a {
+    &:after {
+      display: none;
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.2);
+    }
+    &:hover:after {
+      display: block;
+    }
+  }
+}
+.module_instagram {
+  color: black;
+  font-size: 25px;
+  line-height: 40px;
+  font-weight: 700;
+  margin: 35px 0;
+  padding-top: 30px;
+  padding-bottom: 0px;
+  border-top: solid thin #ccc;
+  @media (max-width: @screen-sm) {
+    font-size: 5vw;
+    line-height: 7vw;
+  }
+  a {
+    color: #1459b2;
+    text-decoration: underline;
+    -webkit-text-decoration-color: #ccc;
+    text-decoration-color: #ccc;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

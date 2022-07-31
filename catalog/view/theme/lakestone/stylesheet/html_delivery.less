@@ -1,0 +1,125 @@
+@import '../../../javascript/bootstrap/less/variables.less';
+@import 'my_variables';
+
+#information-delivery {
+  color: black;
+  h5 {
+    color: black;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    &.heading_title {
+      margin-top: 20px;
+    }
+  }
+  h6 {
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  // .grid.advantage  {
+  //   color: black;
+  //   display: grid;
+  //   grid-gap: 2%;
+  //   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  //   align-items: start;
+  //   justify-items: stretch;
+  //   margin-bottom: 40px;
+  //   .icon {
+  //     display: grid;
+  //     align-content: end;
+  //     justify-content: center;
+  //     min-height: 80px;
+  //     margin-bottom: 30px;
+  //   }
+  //   .text,
+  //   .title {
+  //     line-height: 25px;
+  //   }
+  //   .title {
+  //     /* font-size:  */
+  //     font-weight: 700;
+  //     /* min-height: 60px; */
+  //     margin-bottom: 0;
+  //   }
+  //   .text {
+  //     text-align: center;
+  //   }
+  //   svg {
+  //     max-height: 80px;
+  //     fill: none;
+  //     stroke-width: 2px;
+  //     stroke-miterlimit: 10;
+  //   }
+  // }
+  .delivery-rules {
+    margin: 40px 0;
+    display: grid;
+    grid-gap: 50px 10%;
+    grid-template:
+    "i c1 c2 c3"
+    "i t t t";
+    h6 {
+      font-size: 20px;
+      text-align: left;
+    }
+    @media (max-width:@screen-sm) {
+      margin: 0 5px;
+    }
+    @media (max-width:600px) {
+      grid-template:
+      "i i i"
+      "c1 c2 c3"
+      "t t t";
+    }
+    .info {
+      grid-area: i;
+      .red-phone a {
+        display: block;
+        margin: 20px 0;
+      }
+    }
+    .title {
+      text-align: left;
+      font-weight: 700;
+    }
+    .city1 {
+      grid-area: c1;
+    }
+    .city2 {
+      grid-area: c2;
+    }
+    .city3 {
+      grid-area: c3;
+    }
+    .text {
+      grid-area: t;
+    }
+    .city1::before,
+    .city2::before,
+    .city3::before {
+      content: ' ';
+      position: relative;
+      left: -10px;
+      top: 12px;
+      display: block;
+      border: solid thin @red;
+      background-color: @red;
+      border-radius: 50%;
+      width: 5px;
+      height: 5px;
+    }
+  }
+}
+#information-delivery .panel.payments {
+  h5 {
+    margin: 30px 0;
+  }
+  .panel-text {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}

@@ -1,0 +1,77 @@
+.banner_phone {
+  position: relative;
+  .img-cover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.6;
+  }
+  .text-block {
+    @text_size: 16px;
+    @button_size: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    &.title, &.text {
+      font-size: @text_size;
+    }
+    &.title {
+      top: 20%;
+      @media (max-width: 570px) {
+        font-size: @text_size - 2;
+      }
+      @media (max-width: 500px) {
+        display: none;
+      }
+    }
+    &.text {
+      top: 38%;
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+    &.button, &.button2 {
+      // font-weight: bold;
+    }
+    &.button {
+      top: 55%;
+      font-size: 30px;
+      white-space: nowrap;
+      @media (max-width: 991px) {
+        top: 50%;
+      }
+      @media (max-width: 622px) {
+        font-size: 30px;
+      }
+      @media (max-width: 570px) {
+        font-size: 20px;
+      }
+      @media (max-width: 500px) {
+        top: 30%;
+      }
+      @media (max-width: 320px) {
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &.button2 {
+      top: 72%;
+      font-size: @text_size;
+      font-weight: 600;
+      @media (max-width: 570px) {
+        font-size: @text_size - 2;
+      }
+      @media (max-width: 500px) {
+        top: 70%;
+      }
+      @media (max-width: 320px) {
+        display: none;
+      }
+    }
+  }
+}

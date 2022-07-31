@@ -1,0 +1,47 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+
+.breadcrumb {
+  padding: @breadcrumb-padding-vertical @breadcrumb-padding-horizontal;
+  margin-bottom: @line-height-computed;
+  list-style: none;
+  // background-color: @breadcrumb-bg;
+  // border-radius: @border-radius-base;
+
+  > li {
+    display: inline-block;
+
+    + li:before {
+      // content: "@{breadcrumb-separator}\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+      content: ' ';
+      display: inline-block;
+      padding: 0 5px;
+      // color: @breadcrumb-color;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="6" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><path d="M0 0 l4 3 l-4 3" style="fill:none;stroke:red"/></svg>');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 4px;
+      width: 35px;
+      height: 6px;
+      position: relative;
+      top: -1px;
+    }
+
+    > a {
+      color: @breadcrumb-link-color;
+      text-decoration: underline;
+      text-decoration-color: @greylight;
+    }
+
+  }
+  > li:last-child a {
+    color: @grey;
+    text-decoration: none;
+  }
+
+  > .active {
+    color: @breadcrumb-active-color;
+  }
+}

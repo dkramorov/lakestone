@@ -1,0 +1,118 @@
+@import '../../../javascript/bootstrap/less/variables.less';
+@import 'my_variables';
+@import 'mixins';
+
+/* information */
+body[class^=information-contact] .info {
+        width: 80%;
+        margin: 50px auto;
+}
+body[class^=information-contact] .info span.ersatz_head3 {
+        text-align: center;
+}
+body[class^=information-contact] .info .phone,
+body[class^=information-contact] .info span.ersatz_head3 {
+        font-size: 19px;
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif;
+        color: black;
+        text-transform: uppercase;
+}
+body[class^=information-contact] .form-group {
+        margin-top: 30px;
+}
+body[class^=information-contact] .form-control, body[class^=information-contact] .control-label {
+        font-size: 15px;
+}
+/* company-reviews */
+
+body[class^=information-company_reviews] .content_wrap .item {
+        margin-bottom: 30px;
+        padding: 10px 0;
+}
+body[class^=information-company_reviews] .content_wrap .item:hover {
+        background-color: #f8f8f8;
+}
+body[class^=information-company_reviews] .content_wrap .item .pros {
+        color: #a94442;
+}
+body[class^=information-company_reviews] .content_wrap .item .cons {
+        color: #3f77c0;
+}
+
+#content {
+  .content_wrap .title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: black;
+    margin: auto;
+    display: inline-block;
+    &::after {
+      content: '';
+      display: block;
+      border: solid thin #e99b1f;
+      position: relative;
+      width: 30%;
+      margin: auto;
+      margin-top: 20px;
+    }
+  }
+  .text_canvas img.wide {
+    width: 100%;
+  }
+}
+
+a.phone_link,
+a.email_link {
+  color: @black;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    .text-decoration-style(@black);
+  }
+}
+
+.container-fluid {
+  & ~ footer {
+    margin-top: 0;
+  }
+  .panel-grey {
+    background-color: @grey-back;
+    padding: 20px 0;
+    .content_wrap {
+      margin: 0;
+      padding: 30px 15px;
+    }
+  }
+}
+
+
+.information-sidebar {
+  background-color: white;
+ .item {
+    padding: 10px 0px 10px 16px;
+    color: #444;
+    display: block;
+    font-size: 13px;
+    // @media (max-width: @screen-md) {
+    //   font-size: 10px;
+    // }
+    font-weight: 500;
+    &.active {
+      color: #e14e51;
+    }
+    &.title {
+      margin-top: 15px;
+      text-transform: uppercase;
+      background-color: #333;
+      color: white;
+    }
+  }
+  & > .item.title:first-child {
+    margin-top: 0;
+  }
+}

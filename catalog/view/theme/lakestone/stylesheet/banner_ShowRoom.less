@@ -1,0 +1,68 @@
+.banner-ShowRoom {
+  color: black;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  // grid-template-rows: 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  & > div {
+    flex: 1 1 50%;
+  }
+  align-items: stretch;
+  margin-bottom: 50px;
+  margin-top: 25px;
+  .image {
+    margin-top: -1.15%;
+  }
+  .panel {
+    padding: 20px 30px;
+    text-align: left;
+    h5 {
+      margin-top: 34px;
+      margin-bottom: 40px;
+      color: black;
+      font-size: 21px;
+      font-weight: 700;
+      text-align: left;
+    }
+    .panel-text {
+      font-size: 14px;
+      line-height: 23px;
+      margin-bottom: 30px;
+    }
+    .address svg {
+      width: 12px;
+      height: 12px;
+      margin-right: 20px;
+    }
+  }
+}
+@media (max-width:1200px) {
+  .banner-ShowRoom {
+    // .image {
+    //   margin-top: -11px;
+    // }
+    .panel {
+      .panel-text {
+        margin-bottom: 15px;
+      }
+      h5 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+@media (max-width:991px) {
+  .banner-ShowRoom {
+    .panel .address {
+      margin-bottom: 20px;
+    }
+    .image {
+      flex: 1 1 100%;
+    //   margin-top: -16px;
+    //   img {
+    //     width: 100%;
+    //   }
+    }
+  }
+}

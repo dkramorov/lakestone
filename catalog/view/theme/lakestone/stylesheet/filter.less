@@ -1,0 +1,237 @@
+@import '../../../javascript/bootstrap/less/variables.less';
+@import 'my_variables';
+
+#module_filter {
+	// @active-bg: @greylight;
+	color: black;
+	.input-container {
+		margin-left: 10px;
+		padding-left: 35px;
+		padding-right: 20px;
+		margin-bottom: 12px;
+		.radiomark,
+		.checkmark {
+			margin-top: 3px;
+			height: 15px;
+			width: 15px;
+			border: solid thin black;
+			&:after {
+				content: ".";
+				font-size: 50px;
+				line-height: 0;
+				color: @red;
+				top: -8px;
+				left: 1px;
+			}
+		}
+		.radiomark {
+			margin-top: 18px;
+		}
+		&:hover input ~ .radiomark,
+		&:hover input ~ .checkmark {
+			background-color: #eee;
+		}
+	}
+	.mobile {
+		.btn.disabled, .btn[disabled] {
+			 opacity: 0.25;
+		}
+		svg.svg-angle,
+		svg.svg-close {
+			stroke-width: 3px;
+		}
+		nav {
+			padding: 5px 0;
+			.filters {
+				svg.circle {
+					display: none;
+					width: 12px;
+					height: 12px;
+					position: relative;
+					top: 2px;
+					fill: @red;
+					stroke: none;
+				}
+				&.active {
+					svg {
+						display: none;
+						&.circle {
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+		#mobile-filter-canvas {
+			position: fixed;
+			top: 40px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 10;
+			background-color: white;
+			.svg-close {
+				width: 10px;
+				height: 10px;
+				float: right;
+				margin-top: 7px;
+				margin-right: 12px;
+				cursor: pointer;
+			}
+			.svg-back {
+				width: 10px;
+				height: 10px;
+				float: left;
+				margin-top: 7px;
+				margin-left: 7px;
+				cursor: pointer;
+			}
+			.menu-filter {
+				height: 100%;
+				display: flex;
+				flex-flow: column;
+				// justify-content: space-between;
+				justify-content: stretch;
+				.title {
+					padding: 7px 0;
+					border-bottom: solid 2px @greylight;
+					font-weight: 600;
+				}
+				.menu {
+					flex: 1 1 auto;
+					overflow: auto;
+					.item {
+						display: flex;
+						justify-content: space-between;
+						cursor: pointer;
+						border-bottom: solid thin @greylight;
+						&:last-child {
+							border: 0;
+						}
+						padding: 15px 0;
+						padding-left: 40px;
+						padding-right: 10px;
+						.filter_value {
+							padding-left: 3px;
+							white-space: nowrap;
+							font-size: 12px;
+							color: @greylight;
+							overflow: hidden;
+							text-overflow: ellipsis;
+						}
+						.filter_action {
+							padding-left: 3px;
+							white-space: nowrap;
+							font-size: 11px;
+							color: @blue;
+						}
+						.input-container {
+							margin: -15px 0;
+							padding-top: 15px;
+							padding-bottom: 15px;
+							.checkmark {
+								margin-top: 18px;
+							}
+						}
+					}
+				}
+				.footer {
+					border-top: solid thin @greylight;
+					padding: 15px;
+					grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+					grid-column-gap: 5%;
+					grid-row-gap: 10px;
+				}
+			}
+		}
+		@media (min-width: (@screen-sm + 1)) {
+			display: none;
+		}
+	}
+	.desktop {
+		grid-template-columns: auto auto;
+		.svg-angle {
+			stroke-width: 1.2px;
+			margin-left: 20px;
+		}
+		.svg-remove {
+			position: relative;
+			top: 4px;
+			left: 5px;
+		}
+		.btn-default {
+			border-color: black;
+			border-radius: 3px;
+		}
+		.btn-group {
+			margin-right: 10px;
+			margin-bottom: 5px;
+			button {
+				font-size: 12px;
+				padding: 2px 5px;
+			}
+		}
+		.btn-filter {
+			button.removeFilter {
+				display: none;
+			}
+			&.active {
+				& > button:first-child {
+					border-top-right-radius: 0px;
+					border-bottom-right-radius: 0px;
+					svg.svg-angle {
+						display: none;
+					}
+				}
+				button.removeFilter {
+					display: inline-block;
+					border-top-left-radius: 0px;
+					border-bottom-left-radius: 0px;
+					margin-left: 1px;
+					svg {
+						left: 0;
+						top: 2px;
+						height: 13px;
+					}
+				}
+			}
+			.dropdown-menu {
+				padding: 0px;
+				padding-top: 10px;
+				ul.scrolled_items {
+					list-style: none;
+					padding: 0;
+					max-height: 200px;
+					overflow: auto;
+				}
+				li {
+					margin: 0px;
+				}
+				button {
+					width: 100%;
+				}
+			}
+		}
+		.btn-order {
+			white-space: nowrap;
+			& > button {
+			}
+			button {
+				font-size: 12px;
+				padding: 2px 5px;
+			}
+			.dropdown-menu {
+				.btn-default {
+					font-size: 12px;
+					border: none;
+				}
+			}
+		}
+		.clear_filter {
+			display: inline-block;
+		}
+		@media (max-width: (@screen-sm)) {
+			display: none;
+		}
+	}
+}

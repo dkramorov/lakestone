@@ -1,0 +1,59 @@
+@import "../../../javascript/bootstrap/less/variables.less";
+.banner_advantages {
+  position: relative;
+  .image {
+    .cover {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0,0,0,0.2);
+    }
+  }
+  .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr 1px) 1fr;
+    align-items: center;
+    align-content: center;
+    color: white;
+    text-align: center;
+    .item {
+      width: 50%;
+      margin: auto;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 22px;
+      svg {
+        stroke: none;
+        fill: white;
+        margin-bottom: 15px;
+      }
+      &:last-child {
+        svg {
+          margin-bottom: 9px;
+          @media (max-width: @screen-md) {
+            margin-bottom: 0.8vw;
+          }
+        }
+      }
+      @media (max-width: @screen-md) {
+        font-size: 1.2vw;
+        line-height: 1vw;
+        svg {
+          margin-bottom: 1vw;
+        }
+      }
+    }
+    .delim {
+      height: 50%;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="4px" width="1px" stroke="white"><path d="M0,0 l0,1"/></svg>');
+      background-repeat: repeat-y;
+    }
+  }
+}

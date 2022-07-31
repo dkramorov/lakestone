@@ -1,0 +1,87 @@
+@import 'my_variables';
+@import 'information';
+
+h1 {
+  text-transform: none;
+}
+.faq-item {
+  margin-top: 20px;
+  a {
+    cursor: pointer;
+    color: #3f77c0;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
+}
+.text_canvas-faq {
+  padding-top: 20px;
+  .row:last-child {
+    margin-bottom: 15px;
+  }
+  .cat_title {
+    color: black;
+    font-weight: bold;
+  }
+}
+
+.modal.faq, #faq_modal_question {
+    top: 10%;
+}
+.modal.faq {
+  .btn.btn-blue {
+    padding: 8px 30px;
+    font-size: 16px
+  }
+  &.faq-question .modal-content {
+      max-width: 750px;
+      @media (min-width: 1200px) {
+              min-width: 750px;
+      }
+  }
+  .modal-header {
+    border: none;
+    // .close {
+    //   font-size: 20px;
+    //   font-weight: 100;
+    //   color: black;
+    //   margin-top: -2px;
+    // }
+  }
+  // .modal-content {
+  //   box-shadow: none;
+  //   border-radius: 0;
+  // }
+  .modal-footer {
+    text-align: left;
+    border: none;
+  }
+  .title {
+    color: black;
+    /* font-weight: bold; */
+    font-size: 20px;
+  }
+}
+#faq_modal_question {
+  .modal-content {
+    max-width: 570px;
+  }
+  .form-control::placeholder {
+      color: black;
+  }
+  .form-control {
+      border-radius: 0px;
+      border: none;
+      background-color: #f3f3f3;
+      font-size: 16px;
+      box-shadow: none;
+  }
+  .modal-body {
+      padding-top: 0px;
+      .text {
+          padding-bottom: 20px;
+      }
+      input {
+          margin-bottom: 20px;
+      }
+  }
+}
